@@ -1,0 +1,50 @@
+<% @posts.each do |p| %>
+
+<div class="ranking"  style="clear:left;">
+	<div class="rank_number" style="float:left; position:relative; top: 20px;">
+		<%= p.id %>
+	</div>
+	<div class="voting_summary" style="float:left; position:relative; left: 10px">
+		<div style="position:relative; left:10px">
+			&#9650;
+		</div>
+		<div>
+			<%= 10000 - p.id%>
+		</div>
+		<div style="position:relative; left:10px">
+			&#9660;
+		</div>
+	</div>
+</div>
+
+<div style="float:left; position:relative; left:20px;">
+
+	<% if !p.imagelink.nil? %>
+	<div class="summary_image" style="float:left">
+		<img style="width:70px; height:70px" src="<%= p.imagelink %>">
+	</div>
+	<% else %>
+	<div class="no_summary_image" style="float:left; width:0px; height:70px"></div>
+	<% end %>
+	<div class="post_summary" style="float:left; background-color:white;">
+		<div class="clicky_title" style="float:left;">
+			<%= p.title %>
+			
+			
+			
+		</div>
+		
+		<div class="domain" style="float:left; position:relative; left: 10px; top: 5px">
+			(<%= parse_domain_from_link p.link %>)
+			</div>
+			<br>
+		<div class="submission_info" style="float:left">
+			submitted <%= time_ago_in_words p.updated_at.to_time %> ago by <%= p.user.name %>
+		</div>
+		<br>
+		<div class="number_comments">
+			<%= p.comments.count %> comments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;share
+		</div>
+	</div>
+</div>
+<% end %>
