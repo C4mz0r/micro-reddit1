@@ -19,7 +19,7 @@
 
 <div style="float:left; position:relative; left:20px;">
 
-	<% if !p.imagelink.nil? %>
+	<% if !p.imagelink.nil? and !p.imagelink.empty? %>
 	<div class="summary_image" style="float:left">
 		<img style="width:70px; height:70px" src="<%= p.imagelink %>">
 	</div>

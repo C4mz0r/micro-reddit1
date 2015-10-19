@@ -32,7 +32,7 @@ p4.save
 
 JunkData = {title: "Testing...", link: "http://www.test.com", imagelink: nil}
 
-10.times do
+1.times do
   p = u3.posts.build(JunkData)
   p.save
 end

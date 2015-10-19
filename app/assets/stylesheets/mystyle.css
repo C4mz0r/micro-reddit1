@@ -63,3 +63,41 @@
 	#border-width: 1px;
 	#border-style: solid;
 }
+
+.submit_post_button {
+	padding: 10px;
+	float: right;
+	background-color: #F0F8FF;
+	border-color: blue;
+	border-width: 1px;
+	border-style: solid;
+	position: relative;
+	top: 2px;
+	left: -5px;
+	color: #369;
+	font-size: 15px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.submit_post_button:hover {
+	color: white;
+	background-color: #369;	
+}
+
+.form_fields {
+	background-color: #CEE3F8;
+	width: 520px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.form_fields > input, textarea {
+	width: 500px;
+	font-size: 18px;
+	font-weight: 400;
+	
+}
