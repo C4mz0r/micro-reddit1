@@ -1,0 +1,19 @@
+	<div>
+		<%= render partial: 'commentform' %>
+	</div>
+
+<% @comments.each do |com| %>
+
+	<div class="comment">
+		<div class="comment_header" style="float:left">
+			<%= com.user.name if !com.user.nil? %>
+		</div>
+		<div class="comment_time">
+			&nbsp;&nbsp;
+			<%= time_ago_in_words com.updated_at.to_time %>
+		</div>
+		<div class="comment_body">
+			<%= com.body %>
+		</div>
+	</div>
+<% end %>

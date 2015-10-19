@@ -39,3 +39,9 @@ end
 
 c1 = Comment.new( body: "I like it", post_id: "3" , user_id: "1" )
 c1.save
+
+c2 = Comment.new( body: "Oh, I forgot to mention how much I like the different types of colors of yarn that are available.", post_id: 3, user_id: 1)
+c2.save
+
+c3 = Comment.new( body: "hello " * 40, post_id: 3, user_id: 1)
+c3.save

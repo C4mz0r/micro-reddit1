@@ -101,3 +101,18 @@
 	font-weight: 400;
 	
 }
+
+.comment_header {
+	color: #369;
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.comment_time {
+	font-size: 10px;
+}
+
+.comment_body {
+	font-size: 14px;
+	
+}

@@ -1,0 +1,29 @@
+<%= form_for @comment, url: post_comments_path(@post) do |f| %>
+	<!-- specifying the URL above was needed to make this work -->
+
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@comment.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <p class='form_fields'>
+    <%= f.label :body, :value => 'Comment' %><br>
+    <%= f.text_area :body %>
+  </p>
+
+
+  <p>
+    <%= f.submit :value => 'save' %>
+  </p>
+
+<% end %>

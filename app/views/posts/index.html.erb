@@ -43,7 +43,7 @@
 		</div>
 		<br>
 		<div class="number_comments">
-			<%= p.comments.count %> comments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;share
+			<a href='<%= post_comments_path(p) %>'><%= p.comments.count %> comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;share
 		</div>
 	</div>
 </div>
